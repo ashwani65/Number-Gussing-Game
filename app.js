@@ -8,7 +8,7 @@ GAME FUNCTION:
 */
 
 // Game Values
-let min = 4,
+let min = 1,
   max = 10,
   winningNum = getRandomNum(min, max),
   guessesLeft = 3;
@@ -29,6 +29,7 @@ maxNum.textContent = max;
 game.addEventListener("mousedown", function (e) {
   if (e.target.className === "play-again") {
     window.location.reload();
+    guessInput.value = '';
   }
 });
 
